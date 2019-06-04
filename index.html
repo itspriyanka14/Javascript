@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TASK 1</title>
+	<script>
+		function check(){
+			
+			var name = document.forms["task"]["Name"].value;
+			var age = document.forms["task"]["Age"].value;
+			 var regex=/^[A-Za-z]+$/;
+		if(name.match(regex))
+		{
+			return true;
+		}
+		else if(name =="" || age =="")
+		{			
+			alert("please fill all the details");
+			return false;
+		}
+		else{
+
+
+			alert("please fill your name in the correct format");
+			return false;
+		}
+		}
+	</script>
+
+</head>
+<body>
+	<form name="task" action="detail.html" onsubmit="return check()" method="post">
+<h1>ENTER YOUR DETAILS</h1>
+<p> Name: <input type="text" name="Name" ></p>
+<p> Age: <input type="number" name="Age" ></p>
+
+<input type="submit" value="Finish">
+</form>
+</body>
+</html>
